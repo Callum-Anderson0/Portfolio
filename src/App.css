@@ -34,9 +34,16 @@
   color: white;
 }
 
+.Internal-Image{
+  height:50%;
+  width:70%;
+}
+
 .Scrollable-content {
   display: flex;
   height: 100%;
+  width: 100%;
+  border: 1px solid #000000; /* Optional: for better visibility */
   overflow-y: auto;
   flex-direction: column;
 }
@@ -45,7 +52,7 @@
   background-color: lightgreen;
   margin-bottom: 20px;
   padding: 30px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
 }
 
 .Main-Content{
@@ -58,22 +65,31 @@
   width:200px;
   height: 100vh;
   background-color: #61dafb;
+  border: 1px solid #000000; /* Optional: for better visibility */
   padding: 20px;
   /* position: fixed; */
   top:60px;
 }
 
-.Right-content{
+.Right-Content{
   flex: 1;
   height: 100%;
-  padding: 30px;
+  width: 100%;
+  border: 1px solid #000000; /* Optional: for better visibility */
 }
 .App-link {
   color: #61dafb;
 }
 
+.post{
+  display: inline-block;
+  border: 1px solid #000000; /* Optional: for better visibility */
+}
 
-
+.post-image{
+  height: 300px;
+  width: 500px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
