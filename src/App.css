@@ -48,13 +48,6 @@
   flex-direction: column;
 }
 
-.Post {
-  background-color: lightgreen;
-  margin-bottom: 20px;
-  padding: 30px;
-  border: 1px solid #000;
-}
-
 .Main-Content{
   display: flex;
   height: calc(100vh - 60px);
@@ -65,7 +58,6 @@
   width:200px;
   height: 100vh;
   background-color: #61dafb;
-  border: 1px solid #000000; /* Optional: for better visibility */
   padding: 20px;
   /* position: fixed; */
   top:60px;
@@ -73,9 +65,8 @@
 
 .Right-Content{
   flex: 1;
-  height: 100%;
+  height: 95%;
   width: 100%;
-  border: 1px solid #000000; /* Optional: for better visibility */
 }
 .App-link {
   color: #61dafb;
@@ -86,9 +77,18 @@
   border: 1px solid #000000; /* Optional: for better visibility */
 }
 
-.post-image{
-  height: 300px;
-  width: 500px;
+.post-images{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.post-images img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 @keyframes App-logo-spin {
   from {
