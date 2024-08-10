@@ -85,48 +85,54 @@ function App() {
 
   return (
     <div className="App">
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></link>
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </head>
       <header className="App-header">
         Portfolio
       </header>
-      <div className="Main-Content">
-        <div className="Left-content">
-          <div className="Headshot-container">
-            <img src="icon.jpeg" className="Headshot" alt="cdog"/>
+      <body>
+        <div className="Main-Content">
+          <div className="Left-content">
+            <div className="Headshot-container">
+              <img src="icon.jpeg" className="Headshot" alt="cdog"/>
+            </div>
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn React
+            </a>
           </div>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </div>
-        <div className="Right-Content"> 
-          <div className="Create-Post">
-            <h2>Create a new post</h2>
-            <textarea id="title" name="title" rows="1" cols="50" placeholder="Enter your title here" onChange={handleTitleChange}></textarea>
-            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here" onChange={handleChange}></textarea>    
-            <div className="Create-buttons">
-              <button type="submit" onClick={()=> handleAdd(title,[],content)}>Submit</button>
-              <button>Add Photos</button>
+          <div className="Right-Content"> 
+            <div className="Create-Post">
+              <h2>Create a new post</h2>
+              <textarea id="title" name="title" rows="1" cols="50" placeholder="Enter your title here" onChange={handleTitleChange}></textarea>
+              <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here" onChange={handleChange}></textarea>    
+              <div className="Create-buttons">
+                <button type="submit" onClick={()=> handleAdd(title,[],content)}>Submit</button>
+                <button>Add Photos</button>
+              </div>
+            </div>
+            <div className="Scrollable-content">
+              {posts.map((post)=> (
+                <Post
+                  key = {post.id}
+                  id = {post.id}
+                  title = {post.title}
+                  images = {post.images}
+                  content = {post.content}
+                  onDelete = {handleRemove}
+                />
+              ))}
             </div>
           </div>
-          <div className="Scrollable-content">
-            {posts.map((post)=> (
-              <Post
-                key = {post.id}
-                id = {post.id}
-                title = {post.title}
-                images = {post.images}
-                content = {post.content}
-                onDelete = {handleRemove}
-              />
-            ))}
-          </div>
         </div>
+       </body>
       </div>
-    </div>
   );
 }
 
