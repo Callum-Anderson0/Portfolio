@@ -54,6 +54,15 @@
   overflow: hidden;
 }
 
+.Create-Post{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 10px; 
+  gap: 10px; 
+}
+
 .Left-content{
   width:200px;
   height: 100vh;
@@ -65,7 +74,7 @@
 
 .Right-Content{
   flex: 1;
-  height: 95%;
+  height: 60%;
   width: 100%;
 }
 .App-link {
@@ -91,10 +100,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.Create-Post{
-  display:inline-block;
-  border: 1px solid #000000; /* Optional: for better visibility */
-}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -104,13 +104,13 @@ function App() {
         </div>
         <div className="Right-Content"> 
           <div className="Create-Post">
-            <p>I want to have a tool to be able to add posts from the webpage, in the future this will be hidden to other users?</p>
-            <h3>title</h3>
+            <h2>Create a new post</h2>
             <textarea id="title" name="title" rows="1" cols="50" placeholder="Enter your title here" onChange={handleTitleChange}></textarea>
-            <h3>comments</h3>
-            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here" onChange={handleChange}></textarea>
-                        
-            <button type="submit" onClick={()=> handleAdd(title,[],content)}>Submit</button>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here" onChange={handleChange}></textarea>    
+            <div className="Create-buttons">
+              <button type="submit" onClick={()=> handleAdd(title,[],content)}>Submit</button>
+              <button>Add Photos</button>
+            </div>
           </div>
           <div className="Scrollable-content">
             {posts.map((post)=> (
